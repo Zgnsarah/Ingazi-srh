@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha323-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha323-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>AC MILAN</title>
+    <style>
+        body{
+    background-color: rgb(221, 216, 216);
+    font-weight: bolder;
+}
+.search-bar {
+    transition: width 0.3s ease-in-out;
+    width: 40px;
+}
+
+.search-bar:focus {
+    width: 250px;
+}
+.search{
+    margin-right: 50PX;
+}
+h2{
+    color: rgb(158, 9, 9);  
+}
+h6{
+    color: black;
+}
+.float1{
+float: left;
+}
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .card:hover {
+    transform: scale(1.10);
+    transition: transform 0.5s ease;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+.matches, .standings {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.matches {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+.standings {
+    flex: 1;
+}
+h2 {
+    margin-bottom: 10px;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+.slides {
+    display: none;
+}
+.slides img {
+    width: 100%;
+    border-radius: 8px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+}
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+.dots span {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dots .active {
+    background-color: #717171;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f4f4f4;
+}
+.buy-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+a {
+    color: red;
+    text-decoration: none;
+}
+.logo {
+    position: absolute;
+    top: 95%;
+    left: 600px;
+    transform: translateY(-50%);
+    z-index: 1; /* Ensures it appears above other elements */
+}
+footer{
+  background-color: rgb(116, 2, 2);
+}
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .social-sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    width: 60px;
+    transition: all 0.3s ease;
+  }
+  
+  .social-sidebar a span {
+    margin-left: 10px;
+    display: none;
+    font-weight: bold;
+  }
+  
+  .social-sidebar a:hover {
+    width: 130px;
+  }
+  
+  .social-sidebar a:hover span {
+    display: inline-block;
+  }
+  
+  .social-sidebar .facebook {
+    background-color: #3b5998;
+  }
+  
+  .social-sidebar .instagram {
+    background-color: #e4405f;
+  }
+  .social-sidebar .Twitter {
+    background-color: #75adee;
+  }
+  .social-sidebar .Youtube {
+    background-color: #f52018;
+  }
+  .social-sidebar .Whatsapp {
+    background-color: #27e021;
+  }
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  .products-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark px-5" style="background-color: rgb(116, 2, 2);">
+    <a class="navbar-brand logo" href="FBS.html">
+        <img src="Ac Milan Logo.jpeg" alt="Logo" width="140" height="120">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+     aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse p-2" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="FBS.html"><strong>Home</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="history.html"><strong>History</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="store.html"><strong>Store</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="team.html"><strong>Team</strong></a>
+            </li>
+        </ul>
+        <div class=" d-flex justify-content-right">
+            <div class="position-relative">
+                <input type="text"
+                       class="form-control rounded-pill search-bar pe-5"
+                       placeholder="Discover ac milan..."
+                       aria-label="Search">
+                <button class="btn position-absolute top-50 end-0 translate-middle-y" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+                    class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 
+                        1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 
+                        1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+</nav>
+<div class="social-sidebar">
+    <a href="https://web.facebook.com/ACMilan/?_rdc=1&_rdr" class="facebook" target="_blank">
+      <i class="fab fa-facebook-f fa"></i>
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/acmilan/" class="instagram" target="_blank">
+      <i class="fa fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+    <a href="https://x.com/acmilan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="Twitter" target="_blank">
+        <i class="fa fa-twitter"></i>
+        <span>Twitter</span>
+      </a>
+    <a href="https://www.whatsapp.com/channel/0029VaYHjUs1SWsu7QxQkN1G" class="Whatsapp" target="_blank">
+       <i class="fa fa-whatsapp"></i>
+       <span>Whatsapp</span>
+    </a>
+    <a href="https://www.youtube.com/acmilan" class="Youtube" target="_blank">
+        <i class="fa fa-youtube-play"></i>
+        <span>Youtube</span>
+      </a>
+  </div>
+<BR>
+    <BR>
+<!-- End Navbar -->
+<div class="container mt-5">
+    <div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner rounded mt-3">
+            <div class="carousel-item active">
+                <img src="test.png" width="250" height="400" class="d-block w-100" alt="SLIDE1">
+                <div class="carousel-caption d-none d-md-block">
+                  <strong><h5>Our moments</h5></strong>
+                   <strong><p>Ac milan shake the world again.</p></strong>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="test1.png" width="250" height="400" class="d-block w-100" alt="SLIDE2">
+                <div class="carousel-caption d-none d-md-block">
+                   <strong><h5>Proud of our story</h5></strong>
+                    <strong><p>125 years of Achievements.</p></strong>
+                </div>
+            </div>
+            <div class="carousel-item"> 
+                <img src="CLUB.png" width="250" height="400" class="d-block w-100" alt="SLIDE3">
+                <div class="carousel-caption d-none d-md-block">
+                    <strong><h5>Soldiers</h5></strong>
+                    <strong><p>Set your goals high, and don’t stop til you get there.</p></strong>
+                </div>
+            </div>
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+</div>
+<div class="container mt-3 p-5">
+<H2 class="text-center" style="font-size: 40px;"><strong>Get out who's Us!</strong></H2>
+<br>
+    <a class="float1">
+        <img style="margin-right: 20px;" src="ACC.jpg" alt="ACMILAN" width="200" height="200"></a>
+        <h6 style="margin-bottom: 15px"><strong> AC Milan is one of the most prestigious and successful football clubs in the world, with a rich history that dates back to its founding in 1899. Based in Milan, Italy, the club has won 19 Serie A titles and 7 UEFA Champions League trophies, making it one of the most decorated teams in European football.
+            </strong><BR><BR><strong> Known for its passionate fan base, iconic red and black colors, and a legacy of legendary players such as Paolo Maldini, Marco van Basten, and Alessandro Nesta, AC Milan continues to be a symbol of excellence and tradition in the sport.</H6></strong>
+</div>
+<br>
+    <section id="ACMILAN" class="container my-5 text-center">
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+                <div class="card">
+                    <img src="AC.jpeg" class="card-img-top" alt="Course 1">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>History</strong></h5>
+                        <a href="history.html" class="btn btn-dark btn-md">Discover more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+                <div class="card">
+                    <img src="ac1.jpg" class="card-img-top" alt="Course 2">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Trophies and Titles</strong></h5>
+                        <a href="trophy.html" class="btn btn-dark btn-md">Discover more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+                <div class="card">
+                    <img src="GP.jpg" class="card-img-top" alt="Course 3">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Legends</strong></h5>
+                        <a href="legends.html" class="btn btn-dark btn-md">Discover more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <div class="container container1">
+        <!-- Matches Section -->
+        <div class="matches">
+            <div class="slideshow-container">
+                <div class="slides">
+                    <h2 href="#"><strong>MATCHES</strong></h2>
+                    <p style="color: goldenrod; font-style: italic;">Serie A</p>
+                    <p>Fri, Dec 20 / 2024 - 20:45</p>
+                    <img src="ACvsVN1.png" alt="Slide 1">
+                    <p style="color: goldenrod; font-style: italic;">Marcatonio Bentegodi</p>
+                </div>
+                <div class="slides">
+                    <h2><strong>MATCHES</strong></h2>
+                    <p style="color: goldenrod; font-style: italic;">Suppercuppa Italiana</p>
+                    <p>Fri, Jan 3 / 2024 - 20:00</p>
+                    <img src="ACvsJV2.png" alt="Slide 2">
+                    <p style="color: goldenrod; font-style: italic;">Kingdom Arena</p>
+                </div>
+                <div class="slides">
+                    <h2><strong>MATCHES</strong></h2>
+                    <p style="color: goldenrod; font-style: italic;">Serie A</p>
+                    <p>Tue, Jan 14 / 2024 - 18:30</p>
+                    <img src="ACvsCM3.png" alt="Slide 3">
+                    <p style="color: goldenrod; font-style: italic;">Stadio Giuseppo Singalia</p>
+                </div>
+                <div class="slides">
+                    <h2><strong>MATCHES</strong></h2>
+                    <p style="color: goldenrod; font-style: italic;">UEFA Champions League</p>
+                    <p>Wed, Jan 22 / 2024 - 21:00</p>
+                    <img src="ACvsGN4.png" alt="Slide 4">
+                    <p style="color: goldenrod; font-style: italic;">San Siro</p>
+                </div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="setSlide(1)"></span>
+                <span class="dot" onclick="setSlide(2)"></span>
+                <span class="dot" onclick="setSlide(3)"></span>
+                <span class="dot" onclick="setSlide(4)"></span>
+            </div>
+        </div>
+
+        <!-- Standings Section -->
+        <div class="standings">
+            <h2 class="text-center"><strong>STANDINGS</strong></h2>
+            <table>
+                <tr>
+                    <TH></TH>
+                    <th>Serie A</th>
+                    <th>Pts</th>
+                    <th>P</th>
+                    <th>GD</th>
+                </tr>
+                <tr>
+                    <td>5. <img src="lazio.png" width="30px"></td>
+                    <td>Lazio</td>
+                    <td>31</td>
+                    <td>15</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>6. <img src="JV.png" width="25px"></td>
+                    <td>JUVENTUS</td>
+                    <td>27</td>
+                    <td>15</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>7. <img src="ACM.png" width="20px"></td>
+                    <td>AC Milan</td>
+                    <td>22</td>
+                    <td>14</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>8. <img src="bologna.png" width="20px"></td>
+                    <td>Bologna</td>
+                    <td>22</td>
+                    <td>14</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>9. <img src="Udinese.png" width="30px"></td>
+                    <td>UDINESE</td>
+                    <td>20</td>
+                    <td>15</td>
+                    <td>-4</td>
+                </tr>
+                <tr>
+                    <td>10. <img src="Empoli.png" width="30px"></td>
+                    <td>Empoli</td>
+                    <td>19</td>
+                    <td>15</td>
+                    <td>-1</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        showSlides(currentSlide);
+
+        function showSlides(n) {
+            let slides = document.querySelectorAll(".slides");
+            let dots = document.querySelectorAll(".dot");
+
+            if (n > slides.length) currentSlide = 1;
+            if (n < 1) currentSlide = slides.length;
+
+            slides.forEach(slide => (slide.style.display = "none"));
+            dots.forEach(dot => dot.classList.remove("active"));
+
+            slides[currentSlide - 1].style.display = "block";
+            dots[currentSlide - 1].classList.add("active");
+        }
+
+        function changeSlide(n) {
+            showSlides((currentSlide += n));
+        }
+
+        function setSlide(n) {
+            showSlides((currentSlide = n));
+        }
+    </script>
+
+    <div class="container my-5 text-center">
+        <H2 class="text-center" style="font-size: 50px;"><strong> Shop </strong></H2>
+        <BR>
+        <img src="SHOPI.png" width="850px">
+        <BR>
+        <BR>                                         
+        <a href="store.html" class="btn btn-dark btn-S btn-lg w-75"><strong>GET YOUR JERSEY</strong></a>
+    </div>
+    <div class="container mt-3 text-center">
+        <section class="products-section">
+            <div class="product-card">
+                <img src="P1.png" alt="Mass Banana">
+                <h3>Applied Nutrition ORIGINAL FORMULA</h3>
+                <p>850,00 د.م.</p>
+                <div class="btn btn-danger btn-sm">BUY NOW</div>
+            </div>
+            <div class="product-card">
+                <img src="P2.png" alt="Mass Chocolate">
+                <h3>Applied Nutrition ORIGINAL FORMULA</h3>
+                <p>850,00 د.م.</p>
+                <div class="btn btn-danger btn-sm">BUY NOW</div>
+            </div>
+            <div class="product-card">
+                <img src="P3.png" alt="Mass Oreo">
+                <h3>Applied Nutrition ORIGINAL FORMULA</h3>
+                <p>850,00 د.م.</p>
+                <div class="btn btn-danger btn-sm">BUY NOW</div>
+            </div>
+            <div class="product-card">
+                <img src="P4.png" alt="Mass Oreo">
+                <h3>Applied Nutrition ORIGINAL FORMULA</h3>
+                <p>850,00 د.م.</p>
+                <div class="btn btn-danger btn-sm">BUY NOW</div>
+            </div>
+    </div><BR>
+        <div class="container mt-3 p-5 text-center">
+            <img src="APS.jpeg" width="90%" style="box-shadow:5px 5px 3px 3px gray;">
+        </div>
+    <br><BR>
+    <footer class="text-white text-center py-3" style="font-size: small">
+        <P>#FREE_PALESTINE</P>
+        <img src="KING.png" width="100px">
+        <BR><BR>
+        <p>#ALWAYSMILAN</p>
+        <P>#SEMPREMILAN</P>
+        <p>&copy; 2024 <i class="fas fa-school"></i> Copyright © 2020 ACMilan.com. All rights reserved.
+            <BR> Do not duplicate or redistribute in any form.
+            VAT number: 01073200154
+            Licenza SIAE 5330/I/5051</p>
+        <img src="Ac Milan Logo.jpeg" width="90px">
+        
+    </footer>
+</body>
+</html>

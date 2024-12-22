@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha323-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha323-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>body{
+    background-color: rgb(221, 216, 216);
+    font-weight: bolder;
+}
+.search-bar {
+    transition: width 0.3s ease-in-out;
+    width: 40px;
+}
+
+.search-bar:focus {
+    width: 250px;
+}
+.search{
+    margin-right: 50PX;
+}
+.logo {
+    position: absolute;
+    top: 95%;
+    left: 600px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+footer{
+    background-color: rgb(116, 2, 2);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.products-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .social-sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    width: 60px;
+    transition: all 0.3s ease;
+  }
+  
+  .social-sidebar a span {
+    margin-left: 10px;
+    display: none;
+    font-weight: bold;
+  }
+  
+  .social-sidebar a:hover {
+    width: 130px;
+  }
+  
+  .social-sidebar a:hover span {
+    display: inline-block;
+  }
+  
+  .social-sidebar .facebook {
+    background-color: #3b5998;
+  }
+  
+  .social-sidebar .instagram {
+    background-color: #e4405f;
+  }
+  .social-sidebar .Twitter {
+    background-color: #75adee;
+  }
+  .social-sidebar .Youtube {
+    background-color: #f52018;
+  }
+  .social-sidebar .Whatsapp {
+    background-color: #27e021;
+  }</style>
+    <title>AC MILAN STORE</title>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark px-5" style="background-color: rgb(116, 2, 2);">
+    <a class="navbar-brand logo" href="FBS.html">
+        <img src="Ac Milan Logo.jpeg" width="140" height="120">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navba
+     aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse p-2" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="FBS.html"><strong>Home</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="history.html"><strong>History</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  active" href="store.html"><strong>Store</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="team.html"><strong>Team</strong></a>
+            </li>
+        </ul>
+        <div class=" d-flex justify-content-right">
+            <div class="position-relative">
+                <input type="text"
+                       class="form-control rounded-pill search-bar pe-5"
+                       placeholder="Discover ac milan..."
+                       aria-label="Search">
+                <button class="btn position-absolute top-50 end-0 translate-middle-y" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+                    class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 
+                        1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 
+                        1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+</nav>
+  <div class="social-sidebar">
+    <a href="https://web.facebook.com/ACMilan/?_rdc=1&_rdr" class="facebook" target="_blank">
+      <i class="fab fa-facebook-f fa"></i>
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/acmilan/" class="instagram" target="_blank">
+      <i class="fa fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+    <a href="https://x.com/acmilan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="Twitter" target="_blank">
+        <i class="fa fa-twitter"></i>
+        <span>Twitter</span>
+      </a>
+    <a href="https://www.whatsapp.com/channel/0029VaYHjUs1SWsu7QxQkN1G" class="Whatsapp" target="_blank">
+       <i class="fa fa-whatsapp"></i>
+       <span>Whatsapp</span>
+    </a>
+    <a href="https://www.youtube.com/acmilan" class="Youtube" target="_blank">
+        <i class="fa fa-youtube-play"></i>
+        <span>Youtube</span>
+      </a><br>
+   </div>
+   <BR>
+    <div class="container mt-3 p-5 text-center">
+     <H1 style="color:rgb(116, 2, 2); font-weight: bolder;text-shadow: 2px 2px 5px rgb(114, 112, 112);">STORE</H1>
+    </div>
+    <div class="container mt-3 p-5 text-center">
+    <section class="products-section">
+        <div class="product-card">
+            <img src="S1.png" alt="Mass Banana">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME AUTHENTIC 2024/25 JERSEY</h3>
+            <p>$190,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="S2.png" alt="Mass Chocolate">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME AUTHENTIC 2024/25 JERSEY</h3>
+            <p>$190,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="S3.png" alt="Mass Oreo">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME AUTHENTIC 2024/25 JERSEY</h3>
+            <p>$190,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="S4.png" alt="Critical Mass">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME AUTHENTIC 2024/25 JERSEY</h3>
+            <p>$190,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="M2.png" alt="Mass Oreo">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME 2024/25 JERSEY</h3>
+            <p>$60,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="M3.png" alt="Critical Mass">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME 2024/25 JERSEY</h3>
+            <p>$60,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="M4.png" alt="Mass Oreo">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME 2024/25 SOCKS</h3>
+            <p>$30,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="M5.png" alt="Critical Mass">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME 2024/25 SOCKS</h3>
+            <p>$30,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+    </section>
+    </div>
+    <div class="container mt-3 p-5 text-center">
+    <section class="products-section">
+        <div class="product-card">
+            <img src="S7.png" alt="Mass Banana">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN PREMATCH 2024/25 1/4 ZIP TOP</h3>
+            <p>$95,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="STORE5.png" alt="Mass Chocolate">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME AUTHENTIC 2024/25 JERSEY</h3>
+            <p>$196,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="store6.png" alt="Mass Oreo">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">JERSEY AC Milan 2023/24 - Dark version</h3>
+            <p>$135,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+        <div class="product-card">
+            <img src="S6.png" alt="Critical Mass">
+            <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN PREMATCH 2024/25 JACKET WITH ZIPPER</h3>
+            <p>$142,00</p>
+            <div class="btn btn-danger btn-sm">BUY NOW</div>
+        </div>
+    </section>
+    </div>
+    <div class="container mt-3 p-5 text-center">
+        <section class="products-section">
+            <div class="product-card">
+                <img src="M1.png" alt="Mass Banana">
+                <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME 2024/25 JERSEY</h3>
+                <p>$135,00</p>
+                <div class="btn btn-danger btn-sm">BUY NOW</div>
+            </div>
+            <div class="product-card">
+                <img src="M6.png" alt="Mass Chocolate">
+                <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN LONG SLEEVE 2024/25 JERSEY</h3>
+                <p>$100,00</p>
+                <div class="btn btn-danger btn-sm">BUY NOW</div>
+            </div>
+            <div class="product-card">
+                <img src="M7.png" alt="Mass Oreo">
+                <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN THIRD 2024/25 WOMAN JERSEY</h3>
+                <p>$200,00</p>
+                <div class="btn btn-danger btn-sm">BUY NOW</div>
+            </div>
+        </section></div>
+        <div class="container mt-3 p-5 text-center">
+            <h1 style="font-weight: bolder; color: rgb(163, 91, 211); text-shadow: 3px 3px 5pc rgb(82, 0, 82);" >OTTIENI LA ​​TUA MAGLIA</h1>
+            <img src="storep.jpeg" width="80%" style="box-shadow:5px 5px 3px 3px rgba(100, 100, 99, 0.74);">
+            <h1 style="font-weight: bolder; color: rgb(163, 91, 211); text-shadow: 3px 3px 5pc rgb(82, 0, 82);" >E UNISCITI ALLA FAMIGLIA ORA !</h1>
+        </div>
+        <div class="container mt-3 p-5 text-center">
+            <section class="products-section">
+                <div class="product-card">
+                    <img src="STORE.jpeg" alt="Mass Banana">
+                    <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN HOME AUTHENTIC 2024/25 JERSEY</h3>
+                    <p>$196,00</p>
+                    <div class="btn btn-danger btn-sm">BUY NOW</div>
+                </div>
+                <div class="product-card">
+                    <img src="STORE1.jpeg" alt="Mass Chocolate">
+                    <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN AWAY AUTHENTIC 2024/25 JERSEY</h3>
+                    <p>$196,00</p>
+                    <div class="btn btn-danger btn-sm">BUY NOW</div>
+                </div>
+                <div class="product-card">
+                    <img src="STORE2.jpeg" alt="Mass Oreo">
+                    <h3 style="color: rgb(141, 138, 138);font-family:monospace; font-weight: bold;">MILAN THIRD AUTHENTIC 2024/25 JERSEY</h3>
+                    <p>$180.00 </p>
+                    <div class="btn btn-danger btn-sm">BUY NOW</div>
+                </div>
+            </section></div>
+    <BR><BR><BR>
+        <footer class="text-white text-center py-3" style="font-size: small">
+            <P>#FREE_PALESTINE</P>
+            <img src="KING.png" width="100px">
+            <BR><BR>
+            <p>#ALWAYSMILAN</p>
+            <P>#SEMPREMILAN</P>
+            <p>&copy; 2024 <i class="fas fa-school"></i> Copyright © 2020 ACMilan.com. All rights reserved.
+                <BR> Do not duplicate or redistribute in any form.
+                VAT number: 01073200154
+                Licenza SIAE 5330/I/5051</p>
+            <img src="Ac Milan Logo.jpeg" width="90px">
+            
+        </footer>
+    </body>
+    </html>
